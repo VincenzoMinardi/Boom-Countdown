@@ -15,3 +15,14 @@ let secondDown = setInterval(function() {
   let hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
   let minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
   let seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+  // Visualizziamo il risultato usando l'id 
+  document.getElementById("demo").innerHTML = days + "d " + hours + "h "
+  + minutes + "m " + seconds + "s ";
+
+  // Se il conto la rovescia è terminato, scriviamo del testo
+  if (distance < 0) {
+    clearInterval(x);
+    document.querySelector("demo").innerHTML = "FINITOO!!!!";
+  }
+}, 1000);
