@@ -1,5 +1,17 @@
-p{
-    text-align: center;
-    font-size: 60px;
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: url(../img/foto.png);
+    background-size: cover;
+}
+
+
+
+
+p{ text-align: center;
+    font-size: 6rem;
     margin-top: 0px;
+    color: red;
 }
