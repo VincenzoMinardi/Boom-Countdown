@@ -4,7 +4,7 @@ body{
     align-items: center;
     height: 100vh;
     background-image: url(../img/foto.png);
-    background-size: cover;
+    background-size: contain;
 }
 
 
