@@ -11,10 +11,10 @@ let secondDown = setInterval(function() {
   let distance = dateCountDown - now;
 
   // calcoliamo il tempo del giorno seguente, secondo per secondo
-  let days = Math.floor(distance / (1000 * 60 * 60 * 24));
-  let hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-  let minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-  let seconds = Math.floor((distance % (1000 * 60)) / 1000);
+  let days = Math.floor(distance / (24 * 60 * 60 * 1000));
+  let hours = Math.floor((distance % (24 * 60 * 60 * 1000)) / (1000 * 60 * 60));
+  let minutes = Math.floor((distance % (24 * 60 * 60)) / (1000 * 60));
+  let seconds = Math.floor((distance % (24 * 60 * 60)) / 1000);
 
   // Visualizziamo il risultato usando l'id 
   document.getElementById("demo").innerHTML = days + "d " + hours + "h "
@@ -22,7 +22,7 @@ let secondDown = setInterval(function() {
 
   // Se il conto la rovescia è terminato, scriviamo del testo
   if (distance < 0) {
-    clearInterval(x);
-    document.querySelector("demo").innerHTML = "FINITOO!!!!";
+    clearInterval(secondDown)
+    document.querySelector('#demo').innerHTML = "FINITOO!!!!";
   }
 }, 1000);
